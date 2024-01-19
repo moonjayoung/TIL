@@ -2,9 +2,33 @@ import json
 from pprint import pprint
 
 
-def books_info(books, categories):
-    # 여기에 코드를 작성합니다.
-    pass
+def books_info(books, categories):    
+
+
+    Kcategory = []
+    for n in range(len(books)) : 
+        Kcategory2 = []
+        for i in range(len(categories)) :
+            if categories[i]['id'] in books[n]['categoryId'] :
+                Kcategory2.append(categories[i]['name'])
+                Kcategory.append(Kcategory2)   
+
+    bookLst = []
+    result = {} 
+
+    for n in range(len(books)) : 
+
+        result['author'] = books[n]['author']
+        result['categoryName'] = Kcategory[n]
+        result['cover'] = books[n]['cover']
+        result['description'] = books[n]['description']
+        result['id'] = books[n]['id']
+        result['priceSales'] = books[n]['priceSales']
+        result['title'] = books[n]['title']
+        bookLst.append(result)
+    
+    return bookLst
+
 
 
 # 아래의 코드는 수정하지 않습니다.

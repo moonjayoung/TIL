@@ -3,8 +3,21 @@ from pprint import pprint
 
 
 def book_info(book, categories):
-    pass
-    # 여기에 코드를 작성합니다.
+    Kcategory = []
+    for i in range(len(categories)) :
+        if categories[i]['id'] in book['categoryId'] :
+            Kcategory.append(categories[i]['name'])
+    
+    result = {}
+    result['author'] = book['author']
+    result['categoryName'] = Kcategory
+    result['cover'] = book['cover']
+    result['description'] = book['description']
+    result['id'] = book['id']
+    result['priceSales'] = book['priceSales']
+    result['title'] = book['title']
+
+    return result
 
 
 # 아래의 코드는 수정하지 않습니다.
