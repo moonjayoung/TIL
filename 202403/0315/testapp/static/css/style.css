@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  } 
+
+.footer {
+    /* 맨 아래 고정 */
+    position: fixed;
+    bottom: 0;
+    /* 검은 배경 꽉 차게 높이 50px */
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    /* 흰 글자 */
+    color: white;
+    /* 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontpage{
+    height: 100px;
+    background-color: lightgray;
+}
+
+.my-intro{
+    height: 100px;
+}
+
+.skills{
+    height: 100px;
+    background: lightgray;
+}
+
+.project{
+    height: 100px;
+}
+
+.contact{
+    height: 100px;
+    background: lightgray;
+    /* footer가 50px이니 온전히 차지할 수 있도록 margin 주기 */
+    margin-bottom: 50px;
+}
+
+/* 1000이 될 때까지는 이걸 해라 */
+@media (max-width: 1000px) {
+    .article{
+        display: flex;
+    }
+
+    .frontpage, .my-intro {
+        width: 50%;
+    }
+
+    .skills{
+        width: 30%;
+    }
+
+    .project{
+        width: 70%;
+    }
+}
